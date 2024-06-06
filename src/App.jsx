@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import confetti from "canvas-confetti"
 import { Square } from "./components/Square.jsx"
 import { TURNS} from "./constants.js"
@@ -57,6 +57,12 @@ function App() {
 
   }
 
+  /*useEffect( () =>{
+    saveGameToStorage({
+      window.localStorage.setItem('board', JSON.stringify(newBoard))
+      window.localStorage.setItem('turn', newTurn)
+    })
+  }, [turn, board])*/
 
   return (
     <main className="board">
